@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>Document</title>
+		<title>同层播放</title>
 		<script src="js/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<style type="text/css">
@@ -59,6 +59,10 @@
 			#contentBox {
 				overflow: auto;
 			}
+			
+			a:after {
+				content: attr(href);
+			}
 		</style>
 	</head>
 
@@ -74,7 +78,9 @@
 		</div>
 		<div id="contentBox">
 			<ul>
-				<li>Lorem.</li>
+				<li>
+					<a href="new_file.html">5665</a>
+				</li>
 				<li>Perspiciatis.</li>
 				<li>Ad.</li>
 				<li>Impedit.</li>
@@ -183,10 +189,10 @@
 			$('video').on('x5videoenterfullscreen', function() {
 				//延时修改video尺寸以占满全屏
 				//$(this).attr('x5-video-player-type','');
-				
+
 				setTimeout(function() {
 					$('video').css({
-//						width: window.innerWidth,
+						//						width: window.innerWidth,
 						height: window.innerHeight,
 					});
 				}, 200);
