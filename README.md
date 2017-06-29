@@ -24,7 +24,7 @@
 </style>
 <video controls="controls" src="video/advideo.mp4" x5-video-player-type="h5" ></video>
 ```
-><img src="http://zzx18023.oschina.io/x5-video/img/Screenshot/001.jpg" width="300px"/>
+><img src="img/Screenshot/001.jpg" width="300px"/>
 
 
 
