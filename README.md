@@ -34,7 +34,7 @@
 </style>
 <video controls="controls" src="video/advideo.mp4" x5-video-player-type="h5" ></video>
 ```
-><img src="Screenshot/001.jpg" width="300px"/>
+>|<img src="Screenshot/001.jpg" width="300px"/>|123456798
 
 
 
