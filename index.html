@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>同层播放</title>
+		<script src="js/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<style type="text/css">
+			html,
+			body {
+				font-size: 2.6667vw;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			
+			#videoBox {
+				/*height: 25rem;*/
+				overflow: hidden;
+				flex-shrink: 0;
+				position: relative;
+			}
+			
+			#videoBox>video {
+				width: 100%;
+				/*background-color: silver;*/
+				object-position: 50% 0;
+				/*object-fit: none;*/
+			}
+			
+			#videoBox>.controls {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 2rem;
+				background-color: black;
+				opacity: .5;
+				display: flex;
+				line-height: 2rem;
+				/*font-size: 1rem;*/
+				color: white;
+			}
+			
+			#videoBox>.controls>span {
+				margin: 0 1rem;
+			}
+			
+			#videoBox>.controls>span.range {
+				flex-grow: 1;
+			}
+			
+			#videoBox>.controls>span.range>input {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#contentBox {
+				overflow: auto;
+			}
+			
+			#contentBox>ul>li {
+				border: 1px solid salmon;
+				padding: 10px;
+			}
+			
+			#contentBox>ul>li>input,
+			#contentBox>ul>li>textarea {
+				width: 100%;
+			}
+			
+			#contentBox>ul>li:not(:first-child) {
+				border-top-width: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="videoBox">
+			<video src="video/advideo.mp4" x5-playsinline playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portrait" poster="img/poster.png"></video>
+			<div class="controls">
+				<span class="play">▶️</span>
+				<span class="time"><span>0:12</span><span>/</span><span>1:15</span></span>
+				<span class="range"><input type="range" min="0" max="0" value="0"/></span>
+				<span class="Mute">🔇</span>
+			</div>
+		</div>
+		<div id="contentBox">
+			<ul>
+				<li>video上的进度条等操作按钮为测试UI，未做详细</li>
+				<li><img src="img/1499926274.png" /></li>
+				<li><input type="text" name="" id="" value="" /></li>
+				<li><textarea name="" id="" cols="30" rows="10"></textarea></li>
+				<li>进入同层播放后无法弹出右键菜单，</li>
+				<li>造成的影响为无法通过长按呼出右键菜单而无法复制粘贴保存识别二维码等等。</li>
+				<li>
+					<a href="new_file.html">普通模式</a>
+				</li>
+				<li>Vero consectetur accusamus error fuga.</li>
+				<li>Natus adipisci accusantium a voluptatibus.</li>
+				<li>Deserunt deleniti repellendus ea dolor.</li>
+				<li>Impedit accusantium maiores sapiente laudantium.</li>
+				<li>Debitis quas accusantium rem consectetur?</li>
+				<li>Excepturi minus expedita minima odio.</li>
+				<li>Libero ipsa totam beatae blanditiis!</li>
+				<li>Nostrum fugit doloribus laudantium minus.</li>
+				<li>Aliquam ad repudiandae id voluptatibus.</li>
+				<li>Voluptatibus maxime non eveniet repudiandae.</li>
+				<li>Culpa quibusdam aut at debitis!</li>
+				<li>Molestias amet debitis suscipit autem.</li>
+				<li>Reprehenderit soluta consequuntur consequatur modi.</li>
+				<li>Eum nihil magni error odio.</li>
+				<li>Voluptates eius delectus veritatis ab.</li>
+				<li>Enim iste quidem facilis commodi!</li>
+				<li>Eveniet alias cum autem tenetur?</li>
+				<li>Porro nulla dolorum magnam et?</li>
+				<li>Illum non facilis numquam aliquid.</li>
+				<li>Suscipit provident sit consectetur dolorum.</li>
+				<li>Debitis atque excepturi molestias officia.</li>
+				<li>Quos totam dicta quaerat laudantium.</li>
+				<li>Voluptate libero distinctio iste cumque?</li>
+				<li>Dolor culpa voluptates cum minima.</li>
+				<li>Vitae iusto culpa consequatur deleniti!</li>
+				<li>Nemo necessitatibus quibusdam repudiandae distinctio.</li>
+				<li>Fuga cumque beatae quisquam corporis!</li>
+				<li>Cupiditate autem ipsa inventore quas.</li>
+				<li>Aliquam ipsa magnam quibusdam perspiciatis.</li>
+				<li>Vero quam ab repudiandae sunt!</li>
+				<li>Maiores voluptates in asperiores aperiam.</li>
+				<li>Repudiandae quisquam velit id molestias.</li>
+				<li>Voluptatum expedita distinctio voluptatibus accusamus.</li>
+				<li>Sapiente doloremque in odit incidunt.</li>
+				<li>Dignissimos commodi nostrum sit architecto.</li>
+				<li>Sapiente excepturi assumenda repellat libero?</li>
+				<li>Mollitia officia et ratione. Error.</li>
+				<li>Saepe sed sit sunt repudiandae.</li>
+				<li>Suscipit natus ut amet voluptas.</li>
+				<li>Maiores iste labore molestias similique!</li>
+				<li>Delectus natus inventore ratione repellat.</li>
+				<li>Tempore incidunt facere temporibus vel.</li>
+				<li>Ducimus hic ex consequuntur quia!</li>
+				<li>Facere esse expedita fugit culpa?</li>
+				<li>Omnis culpa totam enim nemo.</li>
+				<li>Inventore labore quia odio soluta!</li>
+				<li>Praesentium enim corporis vero officia.</li>
+				<li>Nemo voluptatem iure sed earum!</li>
+				<li>Molestiae vitae iste minima sint.</li>
+				<li>Impedit quo ipsum iste saepe.</li>
+				<li>Accusantium ut quaerat! Vel accusantium?</li>
+				<li>Ipsum architecto placeat obcaecati vitae.</li>
+				<li>Quasi reiciendis dignissimos sint nisi!</li>
+				<li>Similique nisi illum fuga quis!</li>
+				<li>Minus quasi consequatur quibusdam commodi.</li>
+				<li>Perferendis natus maiores animi ex.</li>
+				<li>Eligendi laborum odit asperiores recusandae?</li>
+				<li>Tenetur omnis vitae inventore odit.</li>
+				<li>Vel dolorem dolores temporibus sunt.</li>
+				<li>Ut quo sequi sint debitis.</li>
+				<li>Velit aperiam doloribus maiores minus.</li>
+				<li>Aliquam quo hic ipsa dicta!</li>
+				<li>Laboriosam placeat libero atque harum.</li>
+				<li>Autem numquam quisquam temporibus necessitatibus.</li>
+				<li>Voluptatum voluptatem perspiciatis saepe voluptatibus.</li>
+				<li>Aspernatur voluptatem molestias quia natus.</li>
+				<li>Porro quidem delectus sed officiis!</li>
+				<li>Inventore nulla a deserunt quibusdam.</li>
+				<li>Animi voluptatem rem voluptate assumenda.</li>
+				<li>Optio aliquid sapiente vero nemo.</li>
+				<li>Repellat rerum dolorem magni autem!</li>
+				<li>Quae et ipsum explicabo autem.</li>
+				<li>Odio quod nesciunt architecto magnam!</li>
+				<li>Enim et exercitationem corporis! Quis.</li>
+				<li>Ab voluptatum sequi doloremque voluptas!</li>
+				<li>Amet fugiat esse aut magnam.</li>
+				<li>Iste veritatis quasi placeat dicta.</li>
+				<li>Minima perferendis sint aliquam optio.</li>
+				<li>Veniam adipisci velit corporis non.</li>
+				<li>Itaque recusandae quae facere ipsa.</li>
+				<li>Nihil nam laboriosam ducimus quod.</li>
+				<li>Odit molestiae reiciendis temporibus rerum.</li>
+				<li>Corporis nostrum modi eum quia?</li>
+				<li>Alias illo deserunt doloremque repellendus.</li>
+				<li>Aliquam soluta quasi porro voluptates.</li>
+				<li>Eum tempora inventore dolorem asperiores.</li>
+				<li>Odit pariatur eaque quas veniam!</li>
+				<li>Cum deleniti quae ipsa beatae.</li>
+				<li>Omnis tempora nesciunt dolorem perferendis.</li>
+				<li>Quisquam sint nemo deleniti minima.</li>
+				<li>Sequi repellendus vitae perferendis. Dignissimos!</li>
+				<li>Rem veniam et officiis cumque.</li>
+				<li>Repellat enim molestias eos earum.</li>
+				<li>Doloribus magnam odit culpa commodi!</li>
+				<li>Vitae minus earum distinctio similique.</li>
+				<li>Temporibus enim a vitae deserunt!</li>
+			</ul>
+
+		</div>
+
+		<script type="text/javascript">
+			//进入全屏状态
+			$('video').on('x5videoenterfullscreen', function() {
+				//延时修改video尺寸以占满全屏
+				//$(this).attr('x5-video-player-type','');
+
+				setTimeout(function() {
+					$('video').css({
+						//						width: window.innerWidth,
+						height: window.innerHeight,
+					});
+				}, 200);
+			});
+
+			//退出全屏状态
+			$('video').on('x5videoexitfullscreen', function() {
+				//清除
+				$(this).css({
+					width: '',
+					height: '',
+				});
+			});
+
+			//获取到视频尺寸修改videoBox高度
+			$('video').on('durationchange', function() {
+				$('#videoBox').height($(this).width() / this.videoWidth * this.videoHeight);
+				$('.range>input').attr('max', this.duration * 1000);
+				$('.time > span:nth-child(3)').html(this.duration); //未进行单位转换！
+			});
+
+			//更新播放进度
+			$('video').on('timeupdate', function() {
+				$('.range>input').val(this.currentTime * 1000);
+				$('.time > span:nth-child(1)').html(this.currentTime); //未进行单位转换！
+			});
+
+			$('.controls>.play').on('click', function() {
+				var video = $('video')[0];
+				if(video.paused) {
+					video.play();
+				} else {
+					video.pause();
+				}
+			});
+		</script>
+	</body>
+
+</html>
