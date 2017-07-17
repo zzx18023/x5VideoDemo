@@ -30,32 +30,6 @@
 				/*object-fit: none;*/
 			}
 			
-			#videoBox>.controls {
-				position: absolute;
-				bottom: 0;
-				width: 100%;
-				height: 2rem;
-				background-color: black;
-				opacity: .5;
-				display: flex;
-				line-height: 2rem;
-				/*font-size: 1rem;*/
-				color: white;
-			}
-			
-			#videoBox>.controls>span {
-				margin: 0 1rem;
-			}
-			
-			#videoBox>.controls>span.range {
-				flex-grow: 1;
-			}
-			
-			#videoBox>.controls>span.range>input {
-				width: 100%;
-				height: 100%;
-			}
-			
 			#contentBox {
 				overflow: auto;
 			}
@@ -73,18 +47,86 @@
 			#contentBox>ul>li:not(:first-child) {
 				border-top-width: 0;
 			}
+			
+			#videoBox>.floor {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			
+			#videoBox>.floor>.controls {
+				/*position: absolute;*/
+				/*bottom: 0;*/
+				width: 100%;
+				height: 2rem;
+				background-color: black;
+				opacity: .5;
+				display: flex;
+				line-height: 2rem;
+				/*font-size: 1rem;*/
+				color: white;
+				flex-shrink: 0;
+			}
+			
+			#videoBox>.floor>.controls>span {
+				margin: 0 1rem;
+			}
+			
+			#videoBox>.floor>.controls>span.range {
+				flex-grow: 1;
+			}
+			
+			#videoBox>.floor>.controls>span.range>input {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#videoBox>.floor>.barrage_box {
+				flex-grow: 1;
+			}
+			
+			#videoBox>.floor>.barrage_box>.barrage {
+				/*display: block;*/
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: salmon;
+				width: 100%;
+				animation: myfirst 5s linear infinite;
+			}
+			
+			@keyframes myfirst {
+				to {
+					left: -100%;
+					/*display: none;*/
+				}
+			}
 		</style>
 	</head>
 
 	<body>
 		<div id="videoBox">
-			<video src="video/advideo.mp4" x5-playsinline playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portrait" poster="img/poster.png"></video>
-			<div class="controls">
-				<span class="play">▶️</span>
-				<span class="time"><span>0:12</span><span>/</span><span>1:15</span></span>
-				<span class="range"><input type="range" min="0" max="0" value="0"/></span>
-				<span class="Mute">🔇</span>
+			<video src="video/advideo.mp4" x5-playsinline playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portrait" poster="img/300x200.png"></video>
+			<div class="floor">
+				<div class="barrage_box">
+					<p class="barrage" style="top:10%;left: 100%;">弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕</p>
+					<p class="barrage" style="top:20%;left: 100%;">弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕</p>
+					<p class="barrage" style="top:30%;left: 100%;">弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕</p>
+					<p class="barrage" style="top:40%;left: 100%;">弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕弹幕</p>
+				</div>
+				<div class="controls">
+					<span class="play">▶️</span>
+					<span class="time"><span>0:12</span><span>/</span><span>1:15</span></span>
+					<span class="range"><input type="range" min="0" max="0" value="0"/></span>
+					<span class="Mute">🔇</span>
+				</div>
+
 			</div>
+
 		</div>
 		<div id="contentBox">
 			<ul>
