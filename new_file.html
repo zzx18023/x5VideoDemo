@@ -5,23 +5,24 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>Document</title>
-		<script src="js/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<style type="text/css">
 			video {
 				width: 100%;
 			}
-			#contentBox{
-				
-			}
+			
+			#contentBox {}
 		</style>
 	</head>
 
 	<body>
 		<div id="videoBox">
-			
+
 		</div>
-		<video src="video/advideo.mp4" x5-playsinline playsinline webkit-playsinline poster="img/poster.png"></video>
+		<video src="video/advideo.mp4" x5-playsinline playsinline webkit-playsinline poster="img/poster.png" preload="auto" autoplay>
+
+		</video>
 		<div id="contentBox">
 			<p>普通播放模式下，video会被浏览器播放器接管，播放器层级置顶，所以无法往video上叠加弹幕 等其他元素</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus ipsa quaerat nisi ipsum accusantium accusamus iusto impedit nostrum hic quam maiores perferendis pariatur repudiandae consequuntur soluta animi labore unde.</p>

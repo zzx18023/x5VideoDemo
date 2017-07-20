@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>同层播放</title>
-		<script src="js/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<style type="text/css">
 			html,
@@ -251,6 +251,7 @@
 						height: window.innerHeight,
 					});
 				}, 200);
+
 			});
 
 			//退出全屏状态
@@ -264,6 +265,7 @@
 
 			//获取到视频尺寸修改videoBox高度
 			$('video').on('durationchange', function() {
+				console.log(this.videoWidth, this.videoHeight);
 				$('#videoBox').height($(this).width() / this.videoWidth * this.videoHeight);
 				$('.range>input').attr('max', this.duration * 1000);
 				$('.time > span:nth-child(3)').html(this.duration); //未进行单位转换！
