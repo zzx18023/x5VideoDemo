@@ -10,6 +10,12 @@
 		<style type="text/css">
 			.layui-layer-video video {
 				width: 100%;
+				display: block;
+			}
+			
+			.layui-layer-video .layui-layer-content {
+				/*padding: 10px;*/
+				/*max-height: 90%;*/
 			}
 		</style>
 	</head>
@@ -18,18 +24,20 @@
 		<button>button</button>
 
 		<script type="text/template" id="layer-content">
-			<video src="video/advideo.mp4" controls playsinline webkit-playsinline x5-playsinline> </video>
+			<video src="video/fVobI0704-mobile.mp4" controls playsinline webkit-playsinline x5-playsinline></video>
 		</script>
 
 		<script type="text/javascript">
 			$('button').on('click', function(e) {
 				layer.open({
 					type: 1,
-					area: ['90%', 'auto'],
+					area: ['90%', ''],
 					skin: 'layui-layer-video',
 					content: $('#layer-content').text(),
 					success: function(layero, index) {
-						layero.find('video')[0].play();
+						setTimeout(function() {
+							layero.find('video')[0].play();
+						}, 300); //延迟0.3s，等待弹窗动画结束再播放
 					},
 				});
 			});
