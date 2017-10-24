@@ -28,6 +28,9 @@
 					area: ['90%', 'auto'],
 					skin: 'layui-layer-video',
 					content: $('#layer-content').text(),
+					success: function(layero, index) {
+						layero.find('video')[0].play();
+					},
 				});
 			});
 		</script>
