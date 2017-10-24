@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Document</title>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.layui-layer-video video {
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<button>button</button>
+
+		<script type="text/template" id="layer-content">
+			<video src="video/advideo.mp4" controls playsinline webkit-playsinline x5-playsinline> </video>
+		</script>
+
+		<script type="text/javascript">
+			$('button').on('click',
+				function(e) {
+					layer.open({
+						type: 1,
+						area: ['90%', 'auto'],
+						skin: 'layui-layer-video',
+						content: $('#layer-content').text(),
+					});
+				});
+		</script>
+
+	</body>
+
+</html>
