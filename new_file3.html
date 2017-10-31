@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Document</title>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			video {
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<video src="video/advideo.mp4" controls playsinline webkit-playsinline x5-playsinline></video>
+
+		<script type="text/javascript">
+			//			$('video')[0].play();
+
+			$(document).on('WeixinJSBridgeReady', function(e) {
+				WeixinJSBridge.invoke('getNetworkType', {}, function(e) {
+					console.log(e.err_msg);
+					if(e.err_msg == 'network_type:wifi') {
+						$('video')[0].play();
+					};
+				});
+			});
+		</script>
+
+	</body>
+
+</html>
